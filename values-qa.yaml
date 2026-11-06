@@ -1,0 +1,4 @@
+replicaCount: 2
+config:
+  springProfile: qa
+  logLevel: INFO

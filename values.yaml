@@ -1,0 +1,19 @@
+replicaCount: 1
+image:
+  repository: nginx
+  tag: "1.27"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 8080
+ingress:
+  enabled: false
+  className: nginx
+  host: spring-demo.example.test
+  path: /
+config:
+  springProfile: default
+  logLevel: INFO
+secret:
+  username: ""
+  password: ""
